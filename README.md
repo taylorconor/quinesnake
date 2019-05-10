@@ -10,6 +10,15 @@ The program compiles itself; to run it first make the source file executable
 
 The snake is controlled with `w`, `a`, `s` and `d`.
 
+Note: some people have reported issues where the snake and food appear black
+in their terminals. This is likely due to the value of the environments
+`TERM` variable. You can try run the program with:
+```
+TERM=xterm-256color ./quinesnake.cpp
+```
+This will tell curses that your terminal supports the high-intensity colour
+range used by quinesnake.
+
 ### quinesnake.cpp
 This is the quine version that also compiles itself and plays snake over its
 own source. It requires:
